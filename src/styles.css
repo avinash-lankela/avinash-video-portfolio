@@ -1307,7 +1307,7 @@ textarea:focus-visible {
   z-index: -1;
   top: 0;
   bottom: 0;
-  background: #10120f;
+  background: var(--canvas);
   box-shadow: inset 0 1px rgba(236, 235, 223, 0.12), inset 0 -1px rgba(236, 235, 223, 0.12);
 }
 
