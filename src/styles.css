@@ -3477,6 +3477,22 @@ textarea:focus-visible {
 .project-card--placeholder .project-card__button:hover .project-card__title { color: #f3effb; }
 .project-card__status { color: #b99aff !important; }
 
+.project-card__play--disabled {
+  padding: 0;
+  border-color: rgba(190, 155, 255, 0.42);
+  background: rgba(7, 5, 12, 0.68);
+  box-shadow: 0 0 28px rgba(139, 92, 246, 0.12);
+  color: #ddccff;
+  opacity: 1;
+  cursor: not-allowed;
+  transition: none;
+}
+
+.project-card--placeholder .project-card__button:hover .project-card__play--disabled {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
 .project-empty {
   margin: 0;
   border: 1px solid rgba(218, 197, 255, 0.12);

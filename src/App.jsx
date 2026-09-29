@@ -181,7 +181,7 @@ function ProjectCard({ project, onSelect }) {
       <span className="project-card__visual">
         <span className="project-card__placeholder" aria-hidden="true">
           {!isComingSoon && <span className="project-card__placeholder-mark"><Icon name="play" size={17} /></span>}
-          <span className="project-card__placeholder-copy">{isComingSoon ? 'COMING SOON' : 'PROJECT PREVIEW'}</span>
+          {!isComingSoon && <span className="project-card__placeholder-copy">PROJECT PREVIEW</span>}
         </span>
         {project.cover && (
           <img
@@ -192,8 +192,19 @@ function ProjectCard({ project, onSelect }) {
           />
         )}
         <span className="project-card__number">{project.number} / {String(projects.length).padStart(2, '0')}</span>
-        {!isComingSoon && <span className="project-card__play"><Icon name="play" size={14} /></span>}
-        <span className="project-card__format">{isComingSoon ? project.status : project.format}</span>
+        {isComingSoon ? (
+          <button
+            className="project-card__play project-card__play--disabled"
+            type="button"
+            disabled
+            aria-label={`Project ${project.number} preview coming soon`}
+          >
+            <Icon name="play" size={14} />
+          </button>
+        ) : (
+          <span className="project-card__play"><Icon name="play" size={14} /></span>
+        )}
+        {!isComingSoon && <span className="project-card__format">{project.format}</span>}
         {!isComingSoon && <span className="project-card__open"><Icon name="diagonal" size={17} /></span>}
       </span>
       <span className="project-card__meta">
