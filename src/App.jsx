@@ -344,7 +344,7 @@ function About() {
     <section className="section about-section" id="about" aria-labelledby="about-title">
       <div className="section-top reveal">
         <SectionLabel index="04">ABOUT AVINASH</SectionLabel>
-        <span className="section-top__note">VIDEO EDITOR · 2026</span>
+        <span className="section-top__note">VIDEO EDITOR</span>
       </div>
       <div className="about-layout">
         <div className="about-quote reveal">
@@ -528,7 +528,7 @@ function MediaDialog({ project, showreelOpen, onClose }) {
   const videoRef = useRef(null);
   const media = useMemo(() => project || (showreelOpen ? {
     title: 'Avinash · showreel',
-    format: 'VIDEO EDITOR · 2026',
+    format: 'VIDEO EDITOR',
     video: portfolio.showreel,
     cover: portfolio.showreelPoster,
     description: 'Showreel preview coming soon.',
